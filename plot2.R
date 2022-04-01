@@ -27,7 +27,7 @@ data <- cbind(dateTime, data)
 data$dateTime <- as.POSIXct(dateTime)
 
 ##Making the second plot
-plot(data$Global_active_power~t$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+plot(data$Global_active_power~data$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
 #File is saved
 dev.copy(png,"plot2.png", width=480, height=480)
